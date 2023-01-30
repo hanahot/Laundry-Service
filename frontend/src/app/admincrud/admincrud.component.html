@@ -1,0 +1,83 @@
+<!-- <div class="container mt-4">
+
+<div class="card">
+    <h1>Admin Dashboard</h1>
+
+<form>
+    <div class="form-group">
+      <label>Appoint No</label>
+      <input type="text" class="form-control" id="appoint" placeholder="Enter Appoint No">
+    </div>
+    <div class="form-group">
+        <label>Customer Address</label>
+        <input type="text" class="form-control" id="customer" placeholder="Enter Customer Address">
+      </div>
+      <div class="form-group">
+        <label>Type of Service</label>
+        <input type="text" class="form-control" id="typeofservice" placeholder="Enter Type of Service">
+      </div>
+      <div class="form-group">
+        <label>Total</label>
+        <input type="text" class="form-control" id="total" placeholder="Enter Total">
+      </div>
+      <div class="form-group">
+        <label>Driver Name</label>
+        <input type="text" class="form-control" id="drivername" placeholder="Enter Driver Name">
+      </div>
+      <div class="form-group">
+        <label>Book Date</label>
+        <input type="text" class="form-control" id="bookdate" placeholder="Enter Book Date">
+      </div>
+      <div class="form-group">
+        <label>Date Delivered</label>
+        <input type="text" class="form-control" id="datedelivered" placeholder="Enter Date Delivered">
+      </div>
+      <div class="form-group">
+        <label>Created At</label>
+        <input type="text" class="form-control" id="createdat" placeholder="Enter Created At">
+      </div>
+      <div class="form-group">
+        <label>Updated At</label>
+        <input type="text" class="form-control" id="updatedat" placeholder="Enter Updated At">
+      </div>
+    <button type="submit" class="btn btn-primary mt-4">Submit</button>
+  </form>
+  </div>
+  <div> -->
+
+    <div class="container mt-4">
+        <h1>Admin Table</h1>
+
+    <table class="table">
+        <thead>
+          <h1 *ngIf="!isResultLoaded">Loading...............</h1>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Appointment No</th>
+            <th scope="col">Customer Address</th>
+            <th scope="col">Type of Service</th>
+            <th scope="col">Total</th>
+            <th scope="col">Driver Name</th>
+            <th scope="col">Book Date</th>
+            <th scope="col">Date Delivered</th>
+            <th scope="col">Created At</th>
+            <th scope="col">Updated At</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let AdminItem of AdminArray">
+            <th scope="row">{{AdminItem.id}}</th>
+            <td>{{AdminItem.appointment_no}}</td>
+            <td>{{AdminItem.customer_address}}</td>
+            <td>{{AdminItem.type_of_service}}</td>
+            <td>{{AdminItem.total}}</td>
+            <td>{{AdminItem.driver_name}}</td>
+            <td>{{AdminItem.book_date}}</td>
+            <td>{{AdminItem.date_delivered}}</td>
+            <td>{{AdminItem.created_at}}</td>
+            <td>{{AdminItem.updated_at}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
