@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AppointmentController;
 
 
 /*
@@ -16,8 +17,11 @@ use App\Http\Controllers\AdminController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-Route::get('/admindashboard',[AdminController::class, 'index']);
+//Route for Admin
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+Route::get('/admindashboard',[AdminController::class, 'index']);
 });
+//Route for Appointment
+Route::post('/create',[AppointmentController::class, 'store']);
 
